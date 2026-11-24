@@ -32,6 +32,14 @@ Si cierras la terminal, vuelve a arrancarlo con `node server.js`. Para correr la
 
 Cada codespace genera un token distinto y tiene su propia dirección.
 
+## Documentación como HTML fijo
+
+La carpeta `docs/` tiene la documentación lista para cualquier alojamiento de HTML: `index.html`, `openapi.json` y el PDF. No necesita que el servidor esté corriendo.
+
+Para publicarla con GitHub Pages: en el repositorio, **Settings › Pages › Branch: main, carpeta /docs › Save**.
+
+Si cambias las rutas, vuelve a generarla con `node generar-docs-estaticos.js`.
+
 ## El token
 
 La primera vez que arranca, el servidor genera un token al azar y lo guarda en el archivo `.env`, en la línea `API_KEY=`. Ábrelo y cópialo desde ahí.

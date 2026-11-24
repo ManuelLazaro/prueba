@@ -1,0 +1,1084 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API de prueba · Tienda y cabinas",
+    "version": "1.0.0",
+    "description": "Datos inventados para validar que un sistema externo puede consultar una API."
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  },
+  "paths": {
+    "/api/cabinas": {
+      "get": {
+        "summary": "Lista las cabinas y paquetes.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Cabina o Paquete.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/cabinas/{codigo}": {
+      "get": {
+        "summary": "Trae una cabina por su código.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo CAB-001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/disponibilidad": {
+      "get": {
+        "summary": "Dice qué cabinas están libres en una fecha.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "fecha",
+            "in": "query",
+            "required": true,
+            "description": "Obligatorio. Formato AAAA-MM-DD.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cabina",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Código de una sola cabina.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/reservas": {
+      "get": {
+        "summary": "Lista las reservas.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Pendiente, Confirmada, ContraEntrega o Cancelada.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "telefono",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Teléfono del cliente.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fecha",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. AAAA-MM-DD.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      },
+      "post": {
+        "summary": "Crea una reserva en estado Pendiente y calcula el adelanto del 50 %.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "cabina": "CAB-002",
+                "fecha": "2026-12-20",
+                "horas": 2,
+                "cliente": "Cliente Prueba",
+                "telefono": "51999000009",
+                "lugar": "Surco"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reservas/{id}": {
+      "get": {
+        "summary": "Trae una reserva por su id.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo RES-1001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/reservas/{id}/confirmar": {
+      "post": {
+        "summary": "Pasa la reserva a Confirmada. Desde ese momento la cabina queda ocupada ese día.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id de la reserva.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/reservas/{id}/cancelar": {
+      "post": {
+        "summary": "Pasa la reserva a Cancelada y libera la fecha.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id de la reserva.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/clientes": {
+      "get": {
+        "summary": "Lista los clientes.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "telefono",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Teléfono exacto, con 51 adelante.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/clientes/{telefono}": {
+      "get": {
+        "summary": "Trae un cliente por su teléfono.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "telefono",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo 51999000001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/productos": {
+      "get": {
+        "summary": "Lista los productos con precio, costo y stock.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "categoria",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Mochilas, Maletas o Accesorios.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "marca",
+            "in": "query",
+            "required": false,
+            "description": "Opcional.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Texto a buscar en el nombre.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bajo_stock",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Con 1, solo los que están en su stock mínimo o por debajo.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      },
+      "post": {
+        "summary": "Agrega un producto. Obligatorios: sku, nombre, categoria y precio. El resto es opcional y arranca en 0.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "sku": "MOC-010",
+                "nombre": "Mochila de cuero sintético",
+                "categoria": "Mochilas",
+                "marca": "Qori",
+                "precio": 139.9,
+                "costo": 75,
+                "stock": 14,
+                "stockMinimo": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/productos/{sku}": {
+      "get": {
+        "summary": "Trae un producto por su SKU.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo MOC-001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      },
+      "put": {
+        "summary": "Cambia solo los campos que envíes: nombre, categoria, marca, precio, costo, stock, stockMinimo o activo. El SKU no se cambia.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "path",
+            "required": true,
+            "description": "SKU del producto.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "precio": 149.9,
+                "stock": 30
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Borra un producto que no tenga ventas ni compras. Si las tiene responde 409: desactívalo con PUT y activo en false.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "path",
+            "required": true,
+            "description": "SKU del producto.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/categorias": {
+      "get": {
+        "summary": "Lista las categorías con su cantidad de productos.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/ventas": {
+      "get": {
+        "summary": "Lista las ventas.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Pendiente, Pagada, Entregada o Anulada.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "telefono",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Teléfono del cliente.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "canal",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. WhatsApp, Tienda o Instagram.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "desde",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. AAAA-MM-DD.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hasta",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. AAAA-MM-DD.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      },
+      "post": {
+        "summary": "Registra una venta Pendiente, descuenta el stock y calcula subtotal, IGV y total.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "telefono": "51999000001",
+                "cliente": "María Quispe",
+                "metodoPago": "Yape",
+                "items": [
+                  {
+                    "sku": "MOC-001",
+                    "cantidad": 2
+                  },
+                  {
+                    "sku": "ACC-001",
+                    "cantidad": 1
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ventas/{id}": {
+      "get": {
+        "summary": "Trae una venta con sus ítems.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo VEN-2001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/ventas/{id}/pagar": {
+      "post": {
+        "summary": "Pasa la venta a Pagada y registra el pago.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id de la venta.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "metodo": "Yape"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ventas/{id}/anular": {
+      "post": {
+        "summary": "Anula la venta y devuelve el stock.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id de la venta.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/pagos": {
+      "get": {
+        "summary": "Lista los pagos recibidos.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "venta",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Id de la venta.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "metodo",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Yape, Tarjeta, Transferencia o Efectivo.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/compras": {
+      "get": {
+        "summary": "Lista las compras a proveedores.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "estado",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Recibida o Pendiente.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "proveedor",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Id del proveedor.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      },
+      "post": {
+        "summary": "Registra una compra Recibida y aumenta el stock.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "proveedor": "PRV-02",
+                "items": [
+                  {
+                    "sku": "MAL-003",
+                    "cantidad": 10,
+                    "costoUnitario": 195
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/compras/{id}": {
+      "get": {
+        "summary": "Trae una compra con sus ítems.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo COM-3001.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/proveedores": {
+      "get": {
+        "summary": "Lista los proveedores.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/proveedores/{id}": {
+      "get": {
+        "summary": "Trae un proveedor por su id.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Por ejemplo PRV-01.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/inventario/movimientos": {
+      "get": {
+        "summary": "Lista las entradas y salidas de stock.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "sku",
+            "in": "query",
+            "required": false,
+            "description": "Opcional.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": false,
+            "description": "Opcional. Entrada o Salida.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/api/reportes/resumen": {
+      "get": {
+        "summary": "Totales de ventas, compras e inventario, y los productos más vendidos.",
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          },
+          "401": {
+            "description": "Falta la clave o no es válida"
+          },
+          "404": {
+            "description": "No existe"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Comprueba que el servicio responde. No pide clave.",
+        "responses": {
+          "200": {
+            "description": "Correcto"
+          }
+        }
+      }
+    }
+  }
+}

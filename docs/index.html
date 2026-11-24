@@ -1,0 +1,281 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API de prueba · Tienda y cabinas</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:24px 16px;color:#1b2233;background:#fff}
+h1{font-size:28px}h2{margin-top:32px;border-bottom:1px solid #d9dce6;padding-bottom:6px}h3{margin:24px 0 4px;font-size:17px}
+code,pre{font-family:ui-monospace,Consolas,monospace;background:#f3f2ff;border-radius:4px}code{padding:1px 5px}pre{padding:12px;overflow:auto}
+.m{font-size:12px;font-weight:700;color:#fff;border-radius:4px;padding:2px 8px}.GET{background:#1fa855}.POST{background:#6c63ff}.PUT{background:#b45309}.DELETE{background:#c62f3b}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #d9dce6;padding:6px 10px;text-align:left}
+</style></head><body>
+<h1>API de prueba · Tienda y cabinas</h1>
+<p>Datos inventados para validar que un sistema externo puede consultar y escribir en una API. Los cambios viven en memoria: al reiniciar el servidor vuelven los datos iniciales.</p>
+<h2>Cómo autenticarse</h2>
+<p>Todas las rutas que empiezan con <code>/api/</code> piden la clave en el encabezado <code>X-API-Key</code>. También se acepta <code>Authorization: Bearer &lt;clave&gt;</code>. La clave está en el archivo <code>.env</code> del proyecto.</p>
+<p>Sin clave responden <code>/health</code>, <code>/docs</code> y <code>openapi.json</code>.</p>
+<h2>Respuestas</h2>
+<table><tr><th>Código</th><th>Significa</th></tr>
+<tr><td>200 / 201</td><td>Correcto / reserva creada</td></tr>
+<tr><td>400</td><td>Falta un dato o tiene mal formato</td></tr>
+<tr><td>401</td><td>Falta la clave o no es válida</td></tr>
+<tr><td>404</td><td>No existe la ruta, la cabina, la reserva o el cliente</td></tr>
+<tr><td>405</td><td>Método no permitido en esa ruta</td></tr>
+<tr><td>409</td><td>La cabina ya está ocupada ese día, o no hay stock suficiente</td></tr></table>
+<p>Los errores siempre traen un campo <code>error</code> con el motivo. Las listas traen <code>total</code> y <code>datos</code>.</p>
+<h2>Regla de disponibilidad</h2>
+<p>Una cabina está ocupada en una fecha solo si tiene una reserva <strong>Confirmada</strong> o <strong>ContraEntrega</strong> para ese día. Las reservas Pendiente y Cancelada no la ocupan.</p>
+<h2>Paginación</h2>
+<p>Todas las listas aceptan <code>limite</code> (1 a 100, por defecto 50) y <code>pagina</code> (desde 1). La respuesta trae <code>total</code>, <code>pagina</code>, <code>limite</code>, <code>paginas</code> y <code>datos</code>.</p>
+<h2>Reglas de la tienda</h2>
+<ul><li>Los precios están en soles e incluyen IGV (18 %). Cada venta trae <code>subtotal</code>, <code>igv</code> y <code>total</code>.</li>
+<li>Registrar una venta descuenta el stock; anularla lo devuelve. Registrar una compra lo aumenta.</li>
+<li>No se puede vender más unidades de las que hay: responde 409.</li></ul>
+<h2>Cabinas, reservas y clientes</h2>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/cabinas</code></h3>
+    <p>Lista las cabinas y paquetes.</p>
+    <ul><li><code>tipo</code> (en la consulta): Opcional. Cabina o Paquete.</li></ul>
+    
+    <p>Ejemplo: <code>/api/cabinas?tipo=Paquete</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/cabinas/{codigo}</code></h3>
+    <p>Trae una cabina por su código.</p>
+    <ul><li><code>codigo</code> (en la ruta): Por ejemplo CAB-001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/cabinas/CAB-001</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/disponibilidad</code></h3>
+    <p>Dice qué cabinas están libres en una fecha.</p>
+    <ul><li><code>fecha</code> (en la consulta): Obligatorio. Formato AAAA-MM-DD.</li><li><code>cabina</code> (en la consulta): Opcional. Código de una sola cabina.</li></ul>
+    
+    <p>Ejemplo: <code>/api/disponibilidad?fecha=2026-12-12&amp;cabina=CAB-001</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/reservas</code></h3>
+    <p>Lista las reservas.</p>
+    <ul><li><code>estado</code> (en la consulta): Opcional. Pendiente, Confirmada, ContraEntrega o Cancelada.</li><li><code>telefono</code> (en la consulta): Opcional. Teléfono del cliente.</li><li><code>fecha</code> (en la consulta): Opcional. AAAA-MM-DD.</li></ul>
+    
+    <p>Ejemplo: <code>/api/reservas?estado=Confirmada</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/reservas</code></h3>
+    <p>Crea una reserva en estado Pendiente y calcula el adelanto del 50 %.</p>
+    
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "cabina": "CAB-002",
+  "fecha": "2026-12-20",
+  "horas": 2,
+  "cliente": "Cliente Prueba",
+  "telefono": "51999000009",
+  "lugar": "Surco"
+}</pre>
+    <p>Ejemplo: <code>/api/reservas</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/reservas/{id}</code></h3>
+    <p>Trae una reserva por su id.</p>
+    <ul><li><code>id</code> (en la ruta): Por ejemplo RES-1001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/reservas/RES-1001</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/reservas/{id}/confirmar</code></h3>
+    <p>Pasa la reserva a Confirmada. Desde ese momento la cabina queda ocupada ese día.</p>
+    <ul><li><code>id</code> (en la ruta): Id de la reserva.</li></ul>
+    
+    <p>Ejemplo: <code>/api/reservas/RES-1002/confirmar</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/reservas/{id}/cancelar</code></h3>
+    <p>Pasa la reserva a Cancelada y libera la fecha.</p>
+    <ul><li><code>id</code> (en la ruta): Id de la reserva.</li></ul>
+    
+    <p>Ejemplo: <code>/api/reservas/RES-1001/cancelar</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/clientes</code></h3>
+    <p>Lista los clientes.</p>
+    <ul><li><code>telefono</code> (en la consulta): Opcional. Teléfono exacto, con 51 adelante.</li></ul>
+    
+    <p>Ejemplo: <code>/api/clientes?telefono=51999000001</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/clientes/{telefono}</code></h3>
+    <p>Trae un cliente por su teléfono.</p>
+    <ul><li><code>telefono</code> (en la ruta): Por ejemplo 51999000001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/clientes/51999000001</code></p>
+  </section><h2>Productos</h2>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/productos</code></h3>
+    <p>Lista los productos con precio, costo y stock.</p>
+    <ul><li><code>categoria</code> (en la consulta): Opcional. Mochilas, Maletas o Accesorios.</li><li><code>marca</code> (en la consulta): Opcional.</li><li><code>q</code> (en la consulta): Opcional. Texto a buscar en el nombre.</li><li><code>bajo_stock</code> (en la consulta): Opcional. Con 1, solo los que están en su stock mínimo o por debajo.</li></ul>
+    
+    <p>Ejemplo: <code>/api/productos?categoria=Maletas</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/productos/{sku}</code></h3>
+    <p>Trae un producto por su SKU.</p>
+    <ul><li><code>sku</code> (en la ruta): Por ejemplo MOC-001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/productos/MOC-001</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/productos</code></h3>
+    <p>Agrega un producto. Obligatorios: sku, nombre, categoria y precio. El resto es opcional y arranca en 0.</p>
+    
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "sku": "MOC-010",
+  "nombre": "Mochila de cuero sintético",
+  "categoria": "Mochilas",
+  "marca": "Qori",
+  "precio": 139.9,
+  "costo": 75,
+  "stock": 14,
+  "stockMinimo": 4
+}</pre>
+    <p>Ejemplo: <code>/api/productos</code></p>
+  </section>
+  <section>
+    <h3><span class="m PUT">PUT</span> <code>/api/productos/{sku}</code></h3>
+    <p>Cambia solo los campos que envíes: nombre, categoria, marca, precio, costo, stock, stockMinimo o activo. El SKU no se cambia.</p>
+    <ul><li><code>sku</code> (en la ruta): SKU del producto.</li></ul>
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "precio": 149.9,
+  "stock": 30
+}</pre>
+    <p>Ejemplo: <code>/api/productos/MOC-001</code></p>
+  </section>
+  <section>
+    <h3><span class="m DELETE">DELETE</span> <code>/api/productos/{sku}</code></h3>
+    <p>Borra un producto que no tenga ventas ni compras. Si las tiene responde 409: desactívalo con PUT y activo en false.</p>
+    <ul><li><code>sku</code> (en la ruta): SKU del producto.</li></ul>
+    
+    <p>Ejemplo: <code>/api/productos/MOC-010</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/categorias</code></h3>
+    <p>Lista las categorías con su cantidad de productos.</p>
+    
+    
+    <p>Ejemplo: <code>/api/categorias</code></p>
+  </section><h2>Ventas</h2>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/ventas</code></h3>
+    <p>Lista las ventas.</p>
+    <ul><li><code>estado</code> (en la consulta): Opcional. Pendiente, Pagada, Entregada o Anulada.</li><li><code>telefono</code> (en la consulta): Opcional. Teléfono del cliente.</li><li><code>canal</code> (en la consulta): Opcional. WhatsApp, Tienda o Instagram.</li><li><code>desde</code> (en la consulta): Opcional. AAAA-MM-DD.</li><li><code>hasta</code> (en la consulta): Opcional. AAAA-MM-DD.</li></ul>
+    
+    <p>Ejemplo: <code>/api/ventas?estado=Pagada&amp;desde=2026-11-01</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/ventas</code></h3>
+    <p>Registra una venta Pendiente, descuenta el stock y calcula subtotal, IGV y total.</p>
+    
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "telefono": "51999000001",
+  "cliente": "María Quispe",
+  "metodoPago": "Yape",
+  "items": [
+    {
+      "sku": "MOC-001",
+      "cantidad": 2
+    },
+    {
+      "sku": "ACC-001",
+      "cantidad": 1
+    }
+  ]
+}</pre>
+    <p>Ejemplo: <code>/api/ventas</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/ventas/{id}</code></h3>
+    <p>Trae una venta con sus ítems.</p>
+    <ul><li><code>id</code> (en la ruta): Por ejemplo VEN-2001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/ventas/VEN-2001</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/ventas/{id}/pagar</code></h3>
+    <p>Pasa la venta a Pagada y registra el pago.</p>
+    <ul><li><code>id</code> (en la ruta): Id de la venta.</li></ul>
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "metodo": "Yape"
+}</pre>
+    <p>Ejemplo: <code>/api/ventas/VEN-2006/pagar</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/ventas/{id}/anular</code></h3>
+    <p>Anula la venta y devuelve el stock.</p>
+    <ul><li><code>id</code> (en la ruta): Id de la venta.</li></ul>
+    
+    <p>Ejemplo: <code>/api/ventas/VEN-2009/anular</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/pagos</code></h3>
+    <p>Lista los pagos recibidos.</p>
+    <ul><li><code>venta</code> (en la consulta): Opcional. Id de la venta.</li><li><code>metodo</code> (en la consulta): Opcional. Yape, Tarjeta, Transferencia o Efectivo.</li></ul>
+    
+    <p>Ejemplo: <code>/api/pagos?venta=VEN-2001</code></p>
+  </section><h2>Compras</h2>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/compras</code></h3>
+    <p>Lista las compras a proveedores.</p>
+    <ul><li><code>estado</code> (en la consulta): Opcional. Recibida o Pendiente.</li><li><code>proveedor</code> (en la consulta): Opcional. Id del proveedor.</li></ul>
+    
+    <p>Ejemplo: <code>/api/compras?estado=Recibida</code></p>
+  </section>
+  <section>
+    <h3><span class="m POST">POST</span> <code>/api/compras</code></h3>
+    <p>Registra una compra Recibida y aumenta el stock.</p>
+    
+    <p>Cuerpo JSON de ejemplo:</p><pre>{
+  "proveedor": "PRV-02",
+  "items": [
+    {
+      "sku": "MAL-003",
+      "cantidad": 10,
+      "costoUnitario": 195
+    }
+  ]
+}</pre>
+    <p>Ejemplo: <code>/api/compras</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/compras/{id}</code></h3>
+    <p>Trae una compra con sus ítems.</p>
+    <ul><li><code>id</code> (en la ruta): Por ejemplo COM-3001.</li></ul>
+    
+    <p>Ejemplo: <code>/api/compras/COM-3001</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/proveedores</code></h3>
+    <p>Lista los proveedores.</p>
+    
+    
+    <p>Ejemplo: <code>/api/proveedores</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/proveedores/{id}</code></h3>
+    <p>Trae un proveedor por su id.</p>
+    <ul><li><code>id</code> (en la ruta): Por ejemplo PRV-01.</li></ul>
+    
+    <p>Ejemplo: <code>/api/proveedores/PRV-01</code></p>
+  </section><h2>Inventario y reportes</h2>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/inventario/movimientos</code></h3>
+    <p>Lista las entradas y salidas de stock.</p>
+    <ul><li><code>sku</code> (en la consulta): Opcional.</li><li><code>tipo</code> (en la consulta): Opcional. Entrada o Salida.</li></ul>
+    
+    <p>Ejemplo: <code>/api/inventario/movimientos?sku=MOC-001</code></p>
+  </section>
+  <section>
+    <h3><span class="m GET">GET</span> <code>/api/reportes/resumen</code></h3>
+    <p>Totales de ventas, compras e inventario, y los productos más vendidos.</p>
+    
+    
+    <p>Ejemplo: <code>/api/reportes/resumen</code></p>
+  </section>
+<h2>Descargas</h2><p>La especificación en JSON está en <a href="openapi.json">openapi.json</a> y esta documentación en PDF en <a href="Documentacion-API-prueba.pdf">Documentacion-API-prueba.pdf</a>. Ninguna de las dos pide clave.</p>
+</body></html>
