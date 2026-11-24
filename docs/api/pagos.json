@@ -1,0 +1,62 @@
+{
+  "total": 6,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "PAG-4001",
+      "venta": "VEN-2001",
+      "fecha": "2026-11-03",
+      "monto": 189.7,
+      "metodo": "Yape",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    },
+    {
+      "id": "PAG-4002",
+      "venta": "VEN-2002",
+      "fecha": "2026-11-05",
+      "monto": 439.8,
+      "metodo": "Tarjeta",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    },
+    {
+      "id": "PAG-4003",
+      "venta": "VEN-2003",
+      "fecha": "2026-11-09",
+      "monto": 839.6,
+      "metodo": "Transferencia",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    },
+    {
+      "id": "PAG-4004",
+      "venta": "VEN-2004",
+      "fecha": "2026-11-12",
+      "monto": 239.7,
+      "metodo": "Yape",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    },
+    {
+      "id": "PAG-4005",
+      "venta": "VEN-2007",
+      "fecha": "2026-11-20",
+      "monto": 409.8,
+      "metodo": "Efectivo",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    },
+    {
+      "id": "PAG-4006",
+      "venta": "VEN-2008",
+      "fecha": "2026-11-22",
+      "monto": 459.6,
+      "metodo": "Yape",
+      "estado": "Aprobado",
+      "moneda": "PEN"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sku": "MOC-001",
+  "nombre": "Mochila urbana para laptop 15.6\"",
+  "categoria": "Mochilas",
+  "marca": "Qori",
+  "precio": 129.9,
+  "costo": 70,
+  "stock": 24,
+  "stockMinimo": 5,
+  "moneda": "PEN",
+  "activo": true
+}

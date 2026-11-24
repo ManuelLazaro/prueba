@@ -1,0 +1,30 @@
+{
+  "id": "VEN-2001",
+  "fecha": "2026-11-03",
+  "telefono": "51999000001",
+  "cliente": "María Quispe",
+  "canal": "WhatsApp",
+  "estado": "Entregada",
+  "metodoPago": "Yape",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MOC-001",
+      "nombre": "Mochila urbana para laptop 15.6\"",
+      "cantidad": 1,
+      "precioUnitario": 129.9,
+      "subtotal": 129.9
+    },
+    {
+      "sku": "ACC-001",
+      "nombre": "Candado TSA de combinación",
+      "cantidad": 2,
+      "precioUnitario": 29.9,
+      "subtotal": 59.8
+    }
+  ],
+  "subtotal": 160.76,
+  "igv": 28.94,
+  "total": 189.7,
+  "moneda": "PEN"
+}

@@ -1,0 +1,16 @@
+{
+  "codigo": "PAQ-002",
+  "nombre": "Paquete Quinceañero y cumpleaños",
+  "tipo": "Paquete",
+  "descripcion": "Cabina abierta con arco de globos y marco personalizado.",
+  "incluye": [
+    "Operador",
+    "Fotos ilimitadas",
+    "Impresión 10 x 15 cm",
+    "Accesorios",
+    "Letrero neón"
+  ],
+  "horasIncluidas": 3,
+  "precio": 980,
+  "moneda": "PEN"
+}

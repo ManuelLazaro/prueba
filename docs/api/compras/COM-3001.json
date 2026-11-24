@@ -1,0 +1,32 @@
+{
+  "id": "COM-3001",
+  "fecha": "2026-10-28",
+  "proveedor": "PRV-01",
+  "proveedorNombre": "Importaciones Qori S.A.C.",
+  "estado": "Recibida",
+  "items": [
+    {
+      "sku": "MOC-001",
+      "nombre": "Mochila urbana para laptop 15.6\"",
+      "cantidad": 30,
+      "costoUnitario": 70,
+      "subtotal": 2100
+    },
+    {
+      "sku": "MOC-002",
+      "nombre": "Mochila escolar reforzada",
+      "cantidad": 50,
+      "costoUnitario": 40,
+      "subtotal": 2000
+    },
+    {
+      "sku": "MOC-006",
+      "nombre": "Mochila ejecutiva antirrobo",
+      "cantidad": 20,
+      "costoUnitario": 88,
+      "subtotal": 1760
+    }
+  ],
+  "total": 5860,
+  "moneda": "PEN"
+}

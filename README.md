@@ -36,6 +36,8 @@ Cada codespace genera un token distinto y tiene su propia dirección.
 
 La carpeta `docs/` tiene la documentación lista para cualquier alojamiento de HTML: `index.html`, `openapi.json` y el PDF. No necesita que el servidor esté corriendo.
 
+También trae los datos de prueba como archivos JSON fijos en `docs/api/` (por ejemplo `api/productos.json`), para probar lecturas sin token ni servidor. Son de solo lectura y no aceptan filtros.
+
 Para publicarla con GitHub Pages: en el repositorio, **Settings › Pages › Branch: main, carpeta /docs › Save**.
 
 Si cambias las rutas, vuelve a generarla con `node generar-docs-estaticos.js`.

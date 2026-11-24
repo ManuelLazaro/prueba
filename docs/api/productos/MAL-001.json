@@ -1,0 +1,12 @@
+{
+  "sku": "MAL-001",
+  "nombre": "Maleta de cabina 20\" rígida",
+  "categoria": "Maletas",
+  "marca": "Andes Trek",
+  "precio": 219.9,
+  "costo": 120,
+  "stock": 20,
+  "stockMinimo": 5,
+  "moneda": "PEN",
+  "activo": true
+}

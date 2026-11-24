@@ -1,0 +1,25 @@
+{
+  "id": "COM-3004",
+  "fecha": "2026-11-21",
+  "proveedor": "PRV-02",
+  "proveedorNombre": "Andes Trek Distribución E.I.R.L.",
+  "estado": "Pendiente",
+  "items": [
+    {
+      "sku": "MAL-003",
+      "nombre": "Maleta grande 28\" rígida",
+      "cantidad": 12,
+      "costoUnitario": 200,
+      "subtotal": 2400
+    },
+    {
+      "sku": "MOC-005",
+      "nombre": "Mochila de trekking 50 L",
+      "cantidad": 10,
+      "costoUnitario": 150,
+      "subtotal": 1500
+    }
+  ],
+  "total": 3900,
+  "moneda": "PEN"
+}

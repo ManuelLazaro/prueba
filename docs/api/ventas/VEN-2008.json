@@ -1,0 +1,30 @@
+{
+  "id": "VEN-2008",
+  "fecha": "2026-11-22",
+  "telefono": "51999000004",
+  "cliente": "Carlos Huamán",
+  "canal": "WhatsApp",
+  "estado": "Pagada",
+  "metodoPago": "Yape",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MOC-004",
+      "nombre": "Mochila de viaje 40 L",
+      "cantidad": 2,
+      "precioUnitario": 189.9,
+      "subtotal": 379.8
+    },
+    {
+      "sku": "ACC-003",
+      "nombre": "Funda impermeable para mochila",
+      "cantidad": 2,
+      "precioUnitario": 39.9,
+      "subtotal": 79.8
+    }
+  ],
+  "subtotal": 389.49,
+  "igv": 70.11,
+  "total": 459.6,
+  "moneda": "PEN"
+}

@@ -1,0 +1,44 @@
+{
+  "total": 3,
+  "pagina": 1,
+  "limite": 50,
+  "paginas": 1,
+  "datos": [
+    {
+      "sku": "MOC-005",
+      "nombre": "Mochila de trekking 50 L",
+      "categoria": "Mochilas",
+      "marca": "Andes Trek",
+      "precio": 259.9,
+      "costo": 150,
+      "stock": 3,
+      "stockMinimo": 5,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MAL-003",
+      "nombre": "Maleta grande 28\" rígida",
+      "categoria": "Maletas",
+      "marca": "Andes Trek",
+      "precio": 339.9,
+      "costo": 200,
+      "stock": 2,
+      "stockMinimo": 4,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "ACC-002",
+      "nombre": "Etiqueta de equipaje",
+      "categoria": "Accesorios",
+      "marca": "Misti",
+      "precio": 14.9,
+      "costo": 5,
+      "stock": 0,
+      "stockMinimo": 10,
+      "moneda": "PEN",
+      "activo": true
+    }
+  ]
+}

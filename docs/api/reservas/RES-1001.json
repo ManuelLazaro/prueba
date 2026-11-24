@@ -1,0 +1,13 @@
+{
+  "id": "RES-1001",
+  "cabina": "CAB-001",
+  "fecha": "2026-12-12",
+  "horas": 3,
+  "cliente": "María Quispe",
+  "telefono": "51999000001",
+  "lugar": "Miraflores",
+  "estado": "Confirmada",
+  "total": 870,
+  "adelanto": 435,
+  "pago": "Yape"
+}

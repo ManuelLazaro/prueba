@@ -1,0 +1,41 @@
+{
+  "fecha": "2026-12-05",
+  "cabinas": [
+    {
+      "codigo": "CAB-001",
+      "nombre": "Cabina clásica cerrada",
+      "disponible": true,
+      "reserva": null
+    },
+    {
+      "codigo": "CAB-002",
+      "nombre": "Cabina abierta con fondo de lentejuelas",
+      "disponible": false,
+      "reserva": "RES-1005"
+    },
+    {
+      "codigo": "CAB-003",
+      "nombre": "Cabina selfie con aro de luz",
+      "disponible": true,
+      "reserva": null
+    },
+    {
+      "codigo": "PAQ-001",
+      "nombre": "Paquete Boda",
+      "disponible": true,
+      "reserva": null
+    },
+    {
+      "codigo": "PAQ-002",
+      "nombre": "Paquete Quinceañero y cumpleaños",
+      "disponible": true,
+      "reserva": null
+    },
+    {
+      "codigo": "PAQ-003",
+      "nombre": "Paquete Corporativo",
+      "disponible": true,
+      "reserva": null
+    }
+  ]
+}

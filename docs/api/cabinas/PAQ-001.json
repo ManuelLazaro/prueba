@@ -1,0 +1,16 @@
+{
+  "codigo": "PAQ-001",
+  "nombre": "Paquete Boda",
+  "tipo": "Paquete",
+  "descripcion": "Cabina abierta con fondo floral y diseño de foto personalizado.",
+  "incluye": [
+    "Operador",
+    "Fotos ilimitadas",
+    "Impresión doble",
+    "Álbum de firmas",
+    "Accesorios"
+  ],
+  "horasIncluidas": 4,
+  "precio": 1350,
+  "moneda": "PEN"
+}

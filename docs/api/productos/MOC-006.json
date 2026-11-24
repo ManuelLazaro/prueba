@@ -1,0 +1,12 @@
+{
+  "sku": "MOC-006",
+  "nombre": "Mochila ejecutiva antirrobo",
+  "categoria": "Mochilas",
+  "marca": "Qori",
+  "precio": 159.9,
+  "costo": 88,
+  "stock": 18,
+  "stockMinimo": 5,
+  "moneda": "PEN",
+  "activo": true
+}

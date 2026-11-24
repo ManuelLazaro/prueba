@@ -1,0 +1,25 @@
+{
+  "id": "COM-3003",
+  "fecha": "2026-11-06",
+  "proveedor": "PRV-03",
+  "proveedorNombre": "Accesorios Misti S.R.L.",
+  "estado": "Recibida",
+  "items": [
+    {
+      "sku": "ACC-001",
+      "nombre": "Candado TSA de combinación",
+      "cantidad": 80,
+      "costoUnitario": 12,
+      "subtotal": 960
+    },
+    {
+      "sku": "ACC-003",
+      "nombre": "Funda impermeable para mochila",
+      "cantidad": 40,
+      "costoUnitario": 18,
+      "subtotal": 720
+    }
+  ],
+  "total": 1680,
+  "moneda": "PEN"
+}

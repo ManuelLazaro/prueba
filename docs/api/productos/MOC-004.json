@@ -1,0 +1,12 @@
+{
+  "sku": "MOC-004",
+  "nombre": "Mochila de viaje 40 L",
+  "categoria": "Mochilas",
+  "marca": "Andes Trek",
+  "precio": 189.9,
+  "costo": 105,
+  "stock": 12,
+  "stockMinimo": 4,
+  "moneda": "PEN",
+  "activo": true
+}

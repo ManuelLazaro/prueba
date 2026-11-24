@@ -1,0 +1,23 @@
+{
+  "id": "VEN-2002",
+  "fecha": "2026-11-05",
+  "telefono": "51999000002",
+  "cliente": "Jorge Ramos",
+  "canal": "Tienda",
+  "estado": "Entregada",
+  "metodoPago": "Tarjeta",
+  "entrega": "Recojo en tienda",
+  "items": [
+    {
+      "sku": "MAL-001",
+      "nombre": "Maleta de cabina 20\" rígida",
+      "cantidad": 2,
+      "precioUnitario": 219.9,
+      "subtotal": 439.8
+    }
+  ],
+  "subtotal": 372.71,
+  "igv": 67.09,
+  "total": 439.8,
+  "moneda": "PEN"
+}

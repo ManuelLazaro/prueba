@@ -1,0 +1,23 @@
+{
+  "id": "VEN-2004",
+  "fecha": "2026-11-12",
+  "telefono": "51999000001",
+  "cliente": "María Quispe",
+  "canal": "WhatsApp",
+  "estado": "Pagada",
+  "metodoPago": "Yape",
+  "entrega": "Recojo en tienda",
+  "items": [
+    {
+      "sku": "MOC-002",
+      "nombre": "Mochila escolar reforzada",
+      "cantidad": 3,
+      "precioUnitario": 79.9,
+      "subtotal": 239.7
+    }
+  ],
+  "subtotal": 203.14,
+  "igv": 36.56,
+  "total": 239.7,
+  "moneda": "PEN"
+}

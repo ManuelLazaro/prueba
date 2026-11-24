@@ -1,0 +1,30 @@
+{
+  "id": "VEN-2007",
+  "fecha": "2026-11-20",
+  "telefono": "51999000003",
+  "cliente": "Lucía Torres",
+  "canal": "Tienda",
+  "estado": "Entregada",
+  "metodoPago": "Efectivo",
+  "entrega": "Recojo en tienda",
+  "items": [
+    {
+      "sku": "MAL-002",
+      "nombre": "Maleta mediana 24\" rígida",
+      "cantidad": 1,
+      "precioUnitario": 279.9,
+      "subtotal": 279.9
+    },
+    {
+      "sku": "MOC-001",
+      "nombre": "Mochila urbana para laptop 15.6\"",
+      "cantidad": 1,
+      "precioUnitario": 129.9,
+      "subtotal": 129.9
+    }
+  ],
+  "subtotal": 347.29,
+  "igv": 62.51,
+  "total": 409.8,
+  "moneda": "PEN"
+}

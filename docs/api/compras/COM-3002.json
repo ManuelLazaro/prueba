@@ -1,0 +1,32 @@
+{
+  "id": "COM-3002",
+  "fecha": "2026-10-30",
+  "proveedor": "PRV-02",
+  "proveedorNombre": "Andes Trek Distribución E.I.R.L.",
+  "estado": "Recibida",
+  "items": [
+    {
+      "sku": "MAL-001",
+      "nombre": "Maleta de cabina 20\" rígida",
+      "cantidad": 25,
+      "costoUnitario": 120,
+      "subtotal": 3000
+    },
+    {
+      "sku": "MAL-002",
+      "nombre": "Maleta mediana 24\" rígida",
+      "cantidad": 18,
+      "costoUnitario": 160,
+      "subtotal": 2880
+    },
+    {
+      "sku": "MAL-009",
+      "nombre": "Juego de 3 maletas rígidas",
+      "cantidad": 10,
+      "costoUnitario": 450,
+      "subtotal": 4500
+    }
+  ],
+  "total": 10380,
+  "moneda": "PEN"
+}

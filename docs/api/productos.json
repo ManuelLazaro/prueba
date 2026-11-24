@@ -1,0 +1,152 @@
+{
+  "total": 12,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "sku": "MOC-001",
+      "nombre": "Mochila urbana para laptop 15.6\"",
+      "categoria": "Mochilas",
+      "marca": "Qori",
+      "precio": 129.9,
+      "costo": 70,
+      "stock": 24,
+      "stockMinimo": 5,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MOC-002",
+      "nombre": "Mochila escolar reforzada",
+      "categoria": "Mochilas",
+      "marca": "Qori",
+      "precio": 79.9,
+      "costo": 40,
+      "stock": 40,
+      "stockMinimo": 8,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MOC-004",
+      "nombre": "Mochila de viaje 40 L",
+      "categoria": "Mochilas",
+      "marca": "Andes Trek",
+      "precio": 189.9,
+      "costo": 105,
+      "stock": 12,
+      "stockMinimo": 4,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MOC-005",
+      "nombre": "Mochila de trekking 50 L",
+      "categoria": "Mochilas",
+      "marca": "Andes Trek",
+      "precio": 259.9,
+      "costo": 150,
+      "stock": 3,
+      "stockMinimo": 5,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MOC-006",
+      "nombre": "Mochila ejecutiva antirrobo",
+      "categoria": "Mochilas",
+      "marca": "Qori",
+      "precio": 159.9,
+      "costo": 88,
+      "stock": 18,
+      "stockMinimo": 5,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MAL-001",
+      "nombre": "Maleta de cabina 20\" rígida",
+      "categoria": "Maletas",
+      "marca": "Andes Trek",
+      "precio": 219.9,
+      "costo": 120,
+      "stock": 20,
+      "stockMinimo": 5,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MAL-002",
+      "nombre": "Maleta mediana 24\" rígida",
+      "categoria": "Maletas",
+      "marca": "Andes Trek",
+      "precio": 279.9,
+      "costo": 160,
+      "stock": 16,
+      "stockMinimo": 4,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MAL-003",
+      "nombre": "Maleta grande 28\" rígida",
+      "categoria": "Maletas",
+      "marca": "Andes Trek",
+      "precio": 339.9,
+      "costo": 200,
+      "stock": 2,
+      "stockMinimo": 4,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "MAL-009",
+      "nombre": "Juego de 3 maletas rígidas",
+      "categoria": "Maletas",
+      "marca": "Andes Trek",
+      "precio": 749.9,
+      "costo": 450,
+      "stock": 8,
+      "stockMinimo": 2,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "ACC-001",
+      "nombre": "Candado TSA de combinación",
+      "categoria": "Accesorios",
+      "marca": "Misti",
+      "precio": 29.9,
+      "costo": 12,
+      "stock": 60,
+      "stockMinimo": 10,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "ACC-002",
+      "nombre": "Etiqueta de equipaje",
+      "categoria": "Accesorios",
+      "marca": "Misti",
+      "precio": 14.9,
+      "costo": 5,
+      "stock": 0,
+      "stockMinimo": 10,
+      "moneda": "PEN",
+      "activo": true
+    },
+    {
+      "sku": "ACC-003",
+      "nombre": "Funda impermeable para mochila",
+      "categoria": "Accesorios",
+      "marca": "Misti",
+      "precio": 39.9,
+      "costo": 18,
+      "stock": 35,
+      "stockMinimo": 8,
+      "moneda": "PEN",
+      "activo": true
+    }
+  ]
+}

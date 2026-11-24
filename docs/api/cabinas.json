@@ -1,0 +1,99 @@
+{
+  "total": 6,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "codigo": "CAB-001",
+      "nombre": "Cabina clásica cerrada",
+      "tipo": "Cabina",
+      "descripcion": "Cabina cerrada con cortina, estilo fotomatón, para grupos pequeños.",
+      "incluye": [
+        "Operador",
+        "Fotos ilimitadas",
+        "Impresión en tira de 3 fotos",
+        "Accesorios básicos"
+      ],
+      "horasIncluidas": 2,
+      "precio": 650,
+      "moneda": "PEN"
+    },
+    {
+      "codigo": "CAB-002",
+      "nombre": "Cabina abierta con fondo de lentejuelas",
+      "tipo": "Cabina",
+      "descripcion": "Cabina abierta con fondo brillante, para fotos grupales de hasta 10 personas.",
+      "incluye": [
+        "Operador",
+        "Fondo a elegir",
+        "Fotos ilimitadas",
+        "Impresión 10 x 15 cm"
+      ],
+      "horasIncluidas": 2,
+      "precio": 750,
+      "moneda": "PEN"
+    },
+    {
+      "codigo": "CAB-003",
+      "nombre": "Cabina selfie con aro de luz",
+      "tipo": "Cabina",
+      "descripcion": "Estación compacta con aro de luz y pantalla táctil.",
+      "incluye": [
+        "Equipo con aro de luz",
+        "Fotos digitales por código QR",
+        "Montaje y desmontaje"
+      ],
+      "horasIncluidas": 3,
+      "precio": 480,
+      "moneda": "PEN"
+    },
+    {
+      "codigo": "PAQ-001",
+      "nombre": "Paquete Boda",
+      "tipo": "Paquete",
+      "descripcion": "Cabina abierta con fondo floral y diseño de foto personalizado.",
+      "incluye": [
+        "Operador",
+        "Fotos ilimitadas",
+        "Impresión doble",
+        "Álbum de firmas",
+        "Accesorios"
+      ],
+      "horasIncluidas": 4,
+      "precio": 1350,
+      "moneda": "PEN"
+    },
+    {
+      "codigo": "PAQ-002",
+      "nombre": "Paquete Quinceañero y cumpleaños",
+      "tipo": "Paquete",
+      "descripcion": "Cabina abierta con arco de globos y marco personalizado.",
+      "incluye": [
+        "Operador",
+        "Fotos ilimitadas",
+        "Impresión 10 x 15 cm",
+        "Accesorios",
+        "Letrero neón"
+      ],
+      "horasIncluidas": 3,
+      "precio": 980,
+      "moneda": "PEN"
+    },
+    {
+      "codigo": "PAQ-003",
+      "nombre": "Paquete Corporativo",
+      "tipo": "Paquete",
+      "descripcion": "Cabina para eventos de empresa con el logo de la marca en cada foto.",
+      "incluye": [
+        "Operador",
+        "Fotos ilimitadas",
+        "Logo en la foto",
+        "Galería en línea"
+      ],
+      "horasIncluidas": 4,
+      "precio": 1500,
+      "moneda": "PEN"
+    }
+  ]
+}

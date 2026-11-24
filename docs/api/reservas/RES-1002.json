@@ -1,0 +1,13 @@
+{
+  "id": "RES-1002",
+  "cabina": "CAB-002",
+  "fecha": "2026-12-19",
+  "horas": 2,
+  "cliente": "Jorge Ramos",
+  "telefono": "51999000002",
+  "lugar": "San Isidro",
+  "estado": "Pendiente",
+  "total": 750,
+  "adelanto": 375,
+  "pago": "Yape"
+}

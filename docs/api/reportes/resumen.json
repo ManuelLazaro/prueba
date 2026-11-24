@@ -1,0 +1,50 @@
+{
+  "moneda": "PEN",
+  "ventas": {
+    "cantidad": 8,
+    "ingresos": 2997.9,
+    "porEstado": {
+      "Entregada": 3,
+      "Pagada": 3,
+      "Anulada": 1,
+      "Pendiente": 2
+    }
+  },
+  "compras": {
+    "cantidad": 4,
+    "total": 21820
+  },
+  "inventario": {
+    "productos": 12,
+    "unidades": 238,
+    "bajoStock": 3,
+    "valorAlCosto": 16884
+  },
+  "masVendidos": [
+    {
+      "sku": "ACC-001",
+      "nombre": "Candado TSA de combinación",
+      "unidades": 5
+    },
+    {
+      "sku": "MAL-001",
+      "nombre": "Maleta de cabina 20\" rígida",
+      "unidades": 3
+    },
+    {
+      "sku": "MOC-002",
+      "nombre": "Mochila escolar reforzada",
+      "unidades": 3
+    },
+    {
+      "sku": "ACC-003",
+      "nombre": "Funda impermeable para mochila",
+      "unidades": 3
+    },
+    {
+      "sku": "MOC-001",
+      "nombre": "Mochila urbana para laptop 15.6\"",
+      "unidades": 2
+    }
+  ]
+}

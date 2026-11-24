@@ -9,7 +9,11 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #d9dce6;padding
 </style></head><body>
 <h1>API de prueba · Tienda y cabinas</h1>
 <p>Datos inventados para validar que un sistema externo puede consultar y escribir en una API. Los cambios viven en memoria: al reiniciar el servidor vuelven los datos iniciales.</p>
-<h2>Cómo autenticarse</h2>
+<h2>Datos de prueba en archivos fijos (solo lectura)</h2>
+<p>Estos archivos JSON se pueden leer directo, sin clave y sin que el servidor esté corriendo. Son una copia de los datos iniciales: no aceptan filtros en la dirección ni permiten escribir. Para token, filtros y escritura hace falta la API en funcionamiento.</p>
+<ul><li><a href="api/productos.json"><code>api/productos.json</code></a></li><li><a href="api/productos/MOC-001.json"><code>api/productos/MOC-001.json</code></a></li><li><a href="api/productos-bajo-stock.json"><code>api/productos-bajo-stock.json</code></a></li><li><a href="api/categorias.json"><code>api/categorias.json</code></a></li><li><a href="api/ventas.json"><code>api/ventas.json</code></a></li><li><a href="api/ventas/VEN-2001.json"><code>api/ventas/VEN-2001.json</code></a></li><li><a href="api/compras.json"><code>api/compras.json</code></a></li><li><a href="api/compras/COM-3001.json"><code>api/compras/COM-3001.json</code></a></li><li><a href="api/proveedores.json"><code>api/proveedores.json</code></a></li><li><a href="api/pagos.json"><code>api/pagos.json</code></a></li><li><a href="api/inventario/movimientos.json"><code>api/inventario/movimientos.json</code></a></li><li><a href="api/reportes/resumen.json"><code>api/reportes/resumen.json</code></a></li><li><a href="api/cabinas.json"><code>api/cabinas.json</code></a></li><li><a href="api/reservas.json"><code>api/reservas.json</code></a></li><li><a href="api/clientes.json"><code>api/clientes.json</code></a></li><li><a href="api/disponibilidad/2026-12-12.json"><code>api/disponibilidad/2026-12-12.json</code></a></li></ul>
+<p>Cada producto, venta, compra, proveedor, cabina, reserva y cliente tiene además su propio archivo, por ejemplo <code>api/productos/MAL-001.json</code>.</p>
+<h2>Rutas de la API en funcionamiento</h2><h2>Cómo autenticarse</h2>
 <p>Todas las rutas que empiezan con <code>/api/</code> piden la clave en el encabezado <code>X-API-Key</code>. También se acepta <code>Authorization: Bearer &lt;clave&gt;</code>. La clave está en el archivo <code>.env</code> del proyecto.</p>
 <p>Sin clave responden <code>/health</code>, <code>/docs</code> y <code>openapi.json</code>.</p>
 <h2>Respuestas</h2>

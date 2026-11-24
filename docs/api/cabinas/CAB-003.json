@@ -1,0 +1,14 @@
+{
+  "codigo": "CAB-003",
+  "nombre": "Cabina selfie con aro de luz",
+  "tipo": "Cabina",
+  "descripcion": "Estación compacta con aro de luz y pantalla táctil.",
+  "incluye": [
+    "Equipo con aro de luz",
+    "Fotos digitales por código QR",
+    "Montaje y desmontaje"
+  ],
+  "horasIncluidas": 3,
+  "precio": 480,
+  "moneda": "PEN"
+}

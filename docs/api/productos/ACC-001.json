@@ -1,0 +1,12 @@
+{
+  "sku": "ACC-001",
+  "nombre": "Candado TSA de combinación",
+  "categoria": "Accesorios",
+  "marca": "Misti",
+  "precio": 29.9,
+  "costo": 12,
+  "stock": 60,
+  "stockMinimo": 10,
+  "moneda": "PEN",
+  "activo": true
+}

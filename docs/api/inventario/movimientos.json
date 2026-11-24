@@ -1,0 +1,176 @@
+{
+  "total": 21,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "MOV-0001",
+      "fecha": "2026-10-28",
+      "sku": "MOC-001",
+      "tipo": "Entrada",
+      "cantidad": 30,
+      "referencia": "COM-3001"
+    },
+    {
+      "id": "MOV-0002",
+      "fecha": "2026-10-28",
+      "sku": "MOC-002",
+      "tipo": "Entrada",
+      "cantidad": 50,
+      "referencia": "COM-3001"
+    },
+    {
+      "id": "MOV-0003",
+      "fecha": "2026-10-28",
+      "sku": "MOC-006",
+      "tipo": "Entrada",
+      "cantidad": 20,
+      "referencia": "COM-3001"
+    },
+    {
+      "id": "MOV-0004",
+      "fecha": "2026-10-30",
+      "sku": "MAL-001",
+      "tipo": "Entrada",
+      "cantidad": 25,
+      "referencia": "COM-3002"
+    },
+    {
+      "id": "MOV-0005",
+      "fecha": "2026-10-30",
+      "sku": "MAL-002",
+      "tipo": "Entrada",
+      "cantidad": 18,
+      "referencia": "COM-3002"
+    },
+    {
+      "id": "MOV-0006",
+      "fecha": "2026-10-30",
+      "sku": "MAL-009",
+      "tipo": "Entrada",
+      "cantidad": 10,
+      "referencia": "COM-3002"
+    },
+    {
+      "id": "MOV-0007",
+      "fecha": "2026-11-06",
+      "sku": "ACC-001",
+      "tipo": "Entrada",
+      "cantidad": 80,
+      "referencia": "COM-3003"
+    },
+    {
+      "id": "MOV-0008",
+      "fecha": "2026-11-06",
+      "sku": "ACC-003",
+      "tipo": "Entrada",
+      "cantidad": 40,
+      "referencia": "COM-3003"
+    },
+    {
+      "id": "MOV-0009",
+      "fecha": "2026-11-03",
+      "sku": "MOC-001",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2001"
+    },
+    {
+      "id": "MOV-0010",
+      "fecha": "2026-11-03",
+      "sku": "ACC-001",
+      "tipo": "Salida",
+      "cantidad": 2,
+      "referencia": "VEN-2001"
+    },
+    {
+      "id": "MOV-0011",
+      "fecha": "2026-11-05",
+      "sku": "MAL-001",
+      "tipo": "Salida",
+      "cantidad": 2,
+      "referencia": "VEN-2002"
+    },
+    {
+      "id": "MOV-0012",
+      "fecha": "2026-11-09",
+      "sku": "MAL-009",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2003"
+    },
+    {
+      "id": "MOV-0013",
+      "fecha": "2026-11-09",
+      "sku": "ACC-001",
+      "tipo": "Salida",
+      "cantidad": 3,
+      "referencia": "VEN-2003"
+    },
+    {
+      "id": "MOV-0014",
+      "fecha": "2026-11-12",
+      "sku": "MOC-002",
+      "tipo": "Salida",
+      "cantidad": 3,
+      "referencia": "VEN-2004"
+    },
+    {
+      "id": "MOV-0015",
+      "fecha": "2026-11-18",
+      "sku": "MOC-006",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2006"
+    },
+    {
+      "id": "MOV-0016",
+      "fecha": "2026-11-18",
+      "sku": "ACC-003",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2006"
+    },
+    {
+      "id": "MOV-0017",
+      "fecha": "2026-11-20",
+      "sku": "MAL-002",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2007"
+    },
+    {
+      "id": "MOV-0018",
+      "fecha": "2026-11-20",
+      "sku": "MOC-001",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2007"
+    },
+    {
+      "id": "MOV-0019",
+      "fecha": "2026-11-22",
+      "sku": "MOC-004",
+      "tipo": "Salida",
+      "cantidad": 2,
+      "referencia": "VEN-2008"
+    },
+    {
+      "id": "MOV-0020",
+      "fecha": "2026-11-22",
+      "sku": "ACC-003",
+      "tipo": "Salida",
+      "cantidad": 2,
+      "referencia": "VEN-2008"
+    },
+    {
+      "id": "MOV-0021",
+      "fecha": "2026-11-23",
+      "sku": "MAL-001",
+      "tipo": "Salida",
+      "cantidad": 1,
+      "referencia": "VEN-2009"
+    }
+  ]
+}

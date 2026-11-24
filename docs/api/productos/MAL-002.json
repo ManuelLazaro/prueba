@@ -1,0 +1,12 @@
+{
+  "sku": "MAL-002",
+  "nombre": "Maleta mediana 24\" rígida",
+  "categoria": "Maletas",
+  "marca": "Andes Trek",
+  "precio": 279.9,
+  "costo": 160,
+  "stock": 16,
+  "stockMinimo": 4,
+  "moneda": "PEN",
+  "activo": true
+}

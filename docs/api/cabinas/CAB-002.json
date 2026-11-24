@@ -1,0 +1,15 @@
+{
+  "codigo": "CAB-002",
+  "nombre": "Cabina abierta con fondo de lentejuelas",
+  "tipo": "Cabina",
+  "descripcion": "Cabina abierta con fondo brillante, para fotos grupales de hasta 10 personas.",
+  "incluye": [
+    "Operador",
+    "Fondo a elegir",
+    "Fotos ilimitadas",
+    "Impresión 10 x 15 cm"
+  ],
+  "horasIncluidas": 2,
+  "precio": 750,
+  "moneda": "PEN"
+}

@@ -1,0 +1,32 @@
+{
+  "total": 4,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "telefono": "51999000001",
+      "nombre": "María Quispe",
+      "distrito": "Miraflores",
+      "correo": "maria.quispe@example.com"
+    },
+    {
+      "telefono": "51999000002",
+      "nombre": "Jorge Ramos",
+      "distrito": "San Isidro",
+      "correo": "jorge.ramos@example.com"
+    },
+    {
+      "telefono": "51999000003",
+      "nombre": "Lucía Torres",
+      "distrito": "Surco",
+      "correo": "lucia.torres@example.com"
+    },
+    {
+      "telefono": "51999000004",
+      "nombre": "Carlos Huamán",
+      "distrito": "La Molina",
+      "correo": "carlos.huaman@example.com"
+    }
+  ]
+}

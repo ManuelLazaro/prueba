@@ -1,0 +1,32 @@
+{
+  "total": 3,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "PRV-01",
+      "nombre": "Importaciones Qori S.A.C.",
+      "ruc": "20600000011",
+      "contacto": "Rosa Paredes",
+      "telefono": "51988000011",
+      "ciudad": "Lima"
+    },
+    {
+      "id": "PRV-02",
+      "nombre": "Andes Trek Distribución E.I.R.L.",
+      "ruc": "20600000022",
+      "contacto": "Miguel Salas",
+      "telefono": "51988000022",
+      "ciudad": "Arequipa"
+    },
+    {
+      "id": "PRV-03",
+      "nombre": "Accesorios Misti S.R.L.",
+      "ruc": "20600000033",
+      "contacto": "Elena Cruz",
+      "telefono": "51988000033",
+      "ciudad": "Lima"
+    }
+  ]
+}

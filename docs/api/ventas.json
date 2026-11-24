@@ -1,0 +1,250 @@
+{
+  "total": 9,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "VEN-2001",
+      "fecha": "2026-11-03",
+      "telefono": "51999000001",
+      "cliente": "María Quispe",
+      "canal": "WhatsApp",
+      "estado": "Entregada",
+      "metodoPago": "Yape",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MOC-001",
+          "nombre": "Mochila urbana para laptop 15.6\"",
+          "cantidad": 1,
+          "precioUnitario": 129.9,
+          "subtotal": 129.9
+        },
+        {
+          "sku": "ACC-001",
+          "nombre": "Candado TSA de combinación",
+          "cantidad": 2,
+          "precioUnitario": 29.9,
+          "subtotal": 59.8
+        }
+      ],
+      "subtotal": 160.76,
+      "igv": 28.94,
+      "total": 189.7,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2002",
+      "fecha": "2026-11-05",
+      "telefono": "51999000002",
+      "cliente": "Jorge Ramos",
+      "canal": "Tienda",
+      "estado": "Entregada",
+      "metodoPago": "Tarjeta",
+      "entrega": "Recojo en tienda",
+      "items": [
+        {
+          "sku": "MAL-001",
+          "nombre": "Maleta de cabina 20\" rígida",
+          "cantidad": 2,
+          "precioUnitario": 219.9,
+          "subtotal": 439.8
+        }
+      ],
+      "subtotal": 372.71,
+      "igv": 67.09,
+      "total": 439.8,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2003",
+      "fecha": "2026-11-09",
+      "telefono": "51999000003",
+      "cliente": "Lucía Torres",
+      "canal": "WhatsApp",
+      "estado": "Pagada",
+      "metodoPago": "Transferencia",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MAL-009",
+          "nombre": "Juego de 3 maletas rígidas",
+          "cantidad": 1,
+          "precioUnitario": 749.9,
+          "subtotal": 749.9
+        },
+        {
+          "sku": "ACC-001",
+          "nombre": "Candado TSA de combinación",
+          "cantidad": 3,
+          "precioUnitario": 29.9,
+          "subtotal": 89.7
+        }
+      ],
+      "subtotal": 711.53,
+      "igv": 128.07,
+      "total": 839.6,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2004",
+      "fecha": "2026-11-12",
+      "telefono": "51999000001",
+      "cliente": "María Quispe",
+      "canal": "WhatsApp",
+      "estado": "Pagada",
+      "metodoPago": "Yape",
+      "entrega": "Recojo en tienda",
+      "items": [
+        {
+          "sku": "MOC-002",
+          "nombre": "Mochila escolar reforzada",
+          "cantidad": 3,
+          "precioUnitario": 79.9,
+          "subtotal": 239.7
+        }
+      ],
+      "subtotal": 203.14,
+      "igv": 36.56,
+      "total": 239.7,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2005",
+      "fecha": "2026-11-14",
+      "telefono": "51999000004",
+      "cliente": "Carlos Huamán",
+      "canal": "Instagram",
+      "estado": "Anulada",
+      "metodoPago": "Yape",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MOC-005",
+          "nombre": "Mochila de trekking 50 L",
+          "cantidad": 1,
+          "precioUnitario": 259.9,
+          "subtotal": 259.9
+        }
+      ],
+      "subtotal": 220.25,
+      "igv": 39.65,
+      "total": 259.9,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2006",
+      "fecha": "2026-11-18",
+      "telefono": "51999000002",
+      "cliente": "Jorge Ramos",
+      "canal": "WhatsApp",
+      "estado": "Pendiente",
+      "metodoPago": "ContraEntrega",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MOC-006",
+          "nombre": "Mochila ejecutiva antirrobo",
+          "cantidad": 1,
+          "precioUnitario": 159.9,
+          "subtotal": 159.9
+        },
+        {
+          "sku": "ACC-003",
+          "nombre": "Funda impermeable para mochila",
+          "cantidad": 1,
+          "precioUnitario": 39.9,
+          "subtotal": 39.9
+        }
+      ],
+      "subtotal": 169.32,
+      "igv": 30.48,
+      "total": 199.8,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2007",
+      "fecha": "2026-11-20",
+      "telefono": "51999000003",
+      "cliente": "Lucía Torres",
+      "canal": "Tienda",
+      "estado": "Entregada",
+      "metodoPago": "Efectivo",
+      "entrega": "Recojo en tienda",
+      "items": [
+        {
+          "sku": "MAL-002",
+          "nombre": "Maleta mediana 24\" rígida",
+          "cantidad": 1,
+          "precioUnitario": 279.9,
+          "subtotal": 279.9
+        },
+        {
+          "sku": "MOC-001",
+          "nombre": "Mochila urbana para laptop 15.6\"",
+          "cantidad": 1,
+          "precioUnitario": 129.9,
+          "subtotal": 129.9
+        }
+      ],
+      "subtotal": 347.29,
+      "igv": 62.51,
+      "total": 409.8,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2008",
+      "fecha": "2026-11-22",
+      "telefono": "51999000004",
+      "cliente": "Carlos Huamán",
+      "canal": "WhatsApp",
+      "estado": "Pagada",
+      "metodoPago": "Yape",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MOC-004",
+          "nombre": "Mochila de viaje 40 L",
+          "cantidad": 2,
+          "precioUnitario": 189.9,
+          "subtotal": 379.8
+        },
+        {
+          "sku": "ACC-003",
+          "nombre": "Funda impermeable para mochila",
+          "cantidad": 2,
+          "precioUnitario": 39.9,
+          "subtotal": 79.8
+        }
+      ],
+      "subtotal": 389.49,
+      "igv": 70.11,
+      "total": 459.6,
+      "moneda": "PEN"
+    },
+    {
+      "id": "VEN-2009",
+      "fecha": "2026-11-23",
+      "telefono": "51999000001",
+      "cliente": "María Quispe",
+      "canal": "WhatsApp",
+      "estado": "Pendiente",
+      "metodoPago": "Yape",
+      "entrega": "Envío a domicilio",
+      "items": [
+        {
+          "sku": "MAL-001",
+          "nombre": "Maleta de cabina 20\" rígida",
+          "cantidad": 1,
+          "precioUnitario": 219.9,
+          "subtotal": 219.9
+        }
+      ],
+      "subtotal": 186.36,
+      "igv": 33.54,
+      "total": 219.9,
+      "moneda": "PEN"
+    }
+  ]
+}

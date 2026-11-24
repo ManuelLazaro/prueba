@@ -1,0 +1,15 @@
+{
+  "codigo": "CAB-001",
+  "nombre": "Cabina clásica cerrada",
+  "tipo": "Cabina",
+  "descripcion": "Cabina cerrada con cortina, estilo fotomatón, para grupos pequeños.",
+  "incluye": [
+    "Operador",
+    "Fotos ilimitadas",
+    "Impresión en tira de 3 fotos",
+    "Accesorios básicos"
+  ],
+  "horasIncluidas": 2,
+  "precio": 650,
+  "moneda": "PEN"
+}

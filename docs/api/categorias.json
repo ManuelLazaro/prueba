@@ -1,0 +1,20 @@
+{
+  "total": 3,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "nombre": "Mochilas",
+      "productos": 5
+    },
+    {
+      "nombre": "Maletas",
+      "productos": 4
+    },
+    {
+      "nombre": "Accesorios",
+      "productos": 3
+    }
+  ]
+}

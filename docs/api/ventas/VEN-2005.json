@@ -1,0 +1,23 @@
+{
+  "id": "VEN-2005",
+  "fecha": "2026-11-14",
+  "telefono": "51999000004",
+  "cliente": "Carlos Huamán",
+  "canal": "Instagram",
+  "estado": "Anulada",
+  "metodoPago": "Yape",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MOC-005",
+      "nombre": "Mochila de trekking 50 L",
+      "cantidad": 1,
+      "precioUnitario": 259.9,
+      "subtotal": 259.9
+    }
+  ],
+  "subtotal": 220.25,
+  "igv": 39.65,
+  "total": 259.9,
+  "moneda": "PEN"
+}

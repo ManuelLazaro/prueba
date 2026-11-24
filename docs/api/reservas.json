@@ -1,0 +1,73 @@
+{
+  "total": 5,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "RES-1001",
+      "cabina": "CAB-001",
+      "fecha": "2026-12-12",
+      "horas": 3,
+      "cliente": "María Quispe",
+      "telefono": "51999000001",
+      "lugar": "Miraflores",
+      "estado": "Confirmada",
+      "total": 870,
+      "adelanto": 435,
+      "pago": "Yape"
+    },
+    {
+      "id": "RES-1002",
+      "cabina": "CAB-002",
+      "fecha": "2026-12-19",
+      "horas": 2,
+      "cliente": "Jorge Ramos",
+      "telefono": "51999000002",
+      "lugar": "San Isidro",
+      "estado": "Pendiente",
+      "total": 750,
+      "adelanto": 375,
+      "pago": "Yape"
+    },
+    {
+      "id": "RES-1003",
+      "cabina": "CAB-003",
+      "fecha": "2026-12-19",
+      "horas": 3,
+      "cliente": "Lucía Torres",
+      "telefono": "51999000003",
+      "lugar": "Surco",
+      "estado": "Cancelada",
+      "total": 480,
+      "adelanto": 240,
+      "pago": "Transferencia"
+    },
+    {
+      "id": "RES-1004",
+      "cabina": "PAQ-001",
+      "fecha": "2026-12-26",
+      "horas": 4,
+      "cliente": "Carlos Huamán",
+      "telefono": "51999000004",
+      "lugar": "La Molina",
+      "estado": "ContraEntrega",
+      "total": 1350,
+      "adelanto": 0,
+      "pago": "Efectivo el día del evento"
+    },
+    {
+      "id": "RES-1005",
+      "cabina": "CAB-002",
+      "fecha": "2026-12-05",
+      "horas": 2,
+      "cliente": "María Quispe",
+      "telefono": "51999000001",
+      "lugar": "Barranco",
+      "estado": "Confirmada",
+      "total": 750,
+      "adelanto": 375,
+      "pago": "Yape"
+    }
+  ]
+}

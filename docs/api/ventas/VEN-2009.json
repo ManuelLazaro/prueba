@@ -1,0 +1,23 @@
+{
+  "id": "VEN-2009",
+  "fecha": "2026-11-23",
+  "telefono": "51999000001",
+  "cliente": "María Quispe",
+  "canal": "WhatsApp",
+  "estado": "Pendiente",
+  "metodoPago": "Yape",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MAL-001",
+      "nombre": "Maleta de cabina 20\" rígida",
+      "cantidad": 1,
+      "precioUnitario": 219.9,
+      "subtotal": 219.9
+    }
+  ],
+  "subtotal": 186.36,
+  "igv": 33.54,
+  "total": 219.9,
+  "moneda": "PEN"
+}

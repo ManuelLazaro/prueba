@@ -1,0 +1,30 @@
+{
+  "id": "VEN-2003",
+  "fecha": "2026-11-09",
+  "telefono": "51999000003",
+  "cliente": "Lucía Torres",
+  "canal": "WhatsApp",
+  "estado": "Pagada",
+  "metodoPago": "Transferencia",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MAL-009",
+      "nombre": "Juego de 3 maletas rígidas",
+      "cantidad": 1,
+      "precioUnitario": 749.9,
+      "subtotal": 749.9
+    },
+    {
+      "sku": "ACC-001",
+      "nombre": "Candado TSA de combinación",
+      "cantidad": 3,
+      "precioUnitario": 29.9,
+      "subtotal": 89.7
+    }
+  ],
+  "subtotal": 711.53,
+  "igv": 128.07,
+  "total": 839.6,
+  "moneda": "PEN"
+}

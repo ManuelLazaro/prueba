@@ -1,0 +1,12 @@
+{
+  "sku": "ACC-003",
+  "nombre": "Funda impermeable para mochila",
+  "categoria": "Accesorios",
+  "marca": "Misti",
+  "precio": 39.9,
+  "costo": 18,
+  "stock": 35,
+  "stockMinimo": 8,
+  "moneda": "PEN",
+  "activo": true
+}

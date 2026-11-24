@@ -1,0 +1,12 @@
+{
+  "sku": "MOC-002",
+  "nombre": "Mochila escolar reforzada",
+  "categoria": "Mochilas",
+  "marca": "Qori",
+  "precio": 79.9,
+  "costo": 40,
+  "stock": 40,
+  "stockMinimo": 8,
+  "moneda": "PEN",
+  "activo": true
+}

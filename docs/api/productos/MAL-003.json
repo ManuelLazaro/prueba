@@ -1,0 +1,12 @@
+{
+  "sku": "MAL-003",
+  "nombre": "Maleta grande 28\" rígida",
+  "categoria": "Maletas",
+  "marca": "Andes Trek",
+  "precio": 339.9,
+  "costo": 200,
+  "stock": 2,
+  "stockMinimo": 4,
+  "moneda": "PEN",
+  "activo": true
+}

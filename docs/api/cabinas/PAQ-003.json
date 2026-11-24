@@ -1,0 +1,15 @@
+{
+  "codigo": "PAQ-003",
+  "nombre": "Paquete Corporativo",
+  "tipo": "Paquete",
+  "descripcion": "Cabina para eventos de empresa con el logo de la marca en cada foto.",
+  "incluye": [
+    "Operador",
+    "Fotos ilimitadas",
+    "Logo en la foto",
+    "Galería en línea"
+  ],
+  "horasIncluidas": 4,
+  "precio": 1500,
+  "moneda": "PEN"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "VEN-2006",
+  "fecha": "2026-11-18",
+  "telefono": "51999000002",
+  "cliente": "Jorge Ramos",
+  "canal": "WhatsApp",
+  "estado": "Pendiente",
+  "metodoPago": "ContraEntrega",
+  "entrega": "Envío a domicilio",
+  "items": [
+    {
+      "sku": "MOC-006",
+      "nombre": "Mochila ejecutiva antirrobo",
+      "cantidad": 1,
+      "precioUnitario": 159.9,
+      "subtotal": 159.9
+    },
+    {
+      "sku": "ACC-003",
+      "nombre": "Funda impermeable para mochila",
+      "cantidad": 1,
+      "precioUnitario": 39.9,
+      "subtotal": 39.9
+    }
+  ],
+  "subtotal": 169.32,
+  "igv": 30.48,
+  "total": 199.8,
+  "moneda": "PEN"
+}

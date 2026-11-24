@@ -1,0 +1,12 @@
+{
+  "sku": "ACC-002",
+  "nombre": "Etiqueta de equipaje",
+  "categoria": "Accesorios",
+  "marca": "Misti",
+  "precio": 14.9,
+  "costo": 5,
+  "stock": 0,
+  "stockMinimo": 10,
+  "moneda": "PEN",
+  "activo": true
+}

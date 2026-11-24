@@ -1,0 +1,122 @@
+{
+  "total": 4,
+  "pagina": 1,
+  "limite": 100,
+  "paginas": 1,
+  "datos": [
+    {
+      "id": "COM-3001",
+      "fecha": "2026-10-28",
+      "proveedor": "PRV-01",
+      "proveedorNombre": "Importaciones Qori S.A.C.",
+      "estado": "Recibida",
+      "items": [
+        {
+          "sku": "MOC-001",
+          "nombre": "Mochila urbana para laptop 15.6\"",
+          "cantidad": 30,
+          "costoUnitario": 70,
+          "subtotal": 2100
+        },
+        {
+          "sku": "MOC-002",
+          "nombre": "Mochila escolar reforzada",
+          "cantidad": 50,
+          "costoUnitario": 40,
+          "subtotal": 2000
+        },
+        {
+          "sku": "MOC-006",
+          "nombre": "Mochila ejecutiva antirrobo",
+          "cantidad": 20,
+          "costoUnitario": 88,
+          "subtotal": 1760
+        }
+      ],
+      "total": 5860,
+      "moneda": "PEN"
+    },
+    {
+      "id": "COM-3002",
+      "fecha": "2026-10-30",
+      "proveedor": "PRV-02",
+      "proveedorNombre": "Andes Trek Distribución E.I.R.L.",
+      "estado": "Recibida",
+      "items": [
+        {
+          "sku": "MAL-001",
+          "nombre": "Maleta de cabina 20\" rígida",
+          "cantidad": 25,
+          "costoUnitario": 120,
+          "subtotal": 3000
+        },
+        {
+          "sku": "MAL-002",
+          "nombre": "Maleta mediana 24\" rígida",
+          "cantidad": 18,
+          "costoUnitario": 160,
+          "subtotal": 2880
+        },
+        {
+          "sku": "MAL-009",
+          "nombre": "Juego de 3 maletas rígidas",
+          "cantidad": 10,
+          "costoUnitario": 450,
+          "subtotal": 4500
+        }
+      ],
+      "total": 10380,
+      "moneda": "PEN"
+    },
+    {
+      "id": "COM-3003",
+      "fecha": "2026-11-06",
+      "proveedor": "PRV-03",
+      "proveedorNombre": "Accesorios Misti S.R.L.",
+      "estado": "Recibida",
+      "items": [
+        {
+          "sku": "ACC-001",
+          "nombre": "Candado TSA de combinación",
+          "cantidad": 80,
+          "costoUnitario": 12,
+          "subtotal": 960
+        },
+        {
+          "sku": "ACC-003",
+          "nombre": "Funda impermeable para mochila",
+          "cantidad": 40,
+          "costoUnitario": 18,
+          "subtotal": 720
+        }
+      ],
+      "total": 1680,
+      "moneda": "PEN"
+    },
+    {
+      "id": "COM-3004",
+      "fecha": "2026-11-21",
+      "proveedor": "PRV-02",
+      "proveedorNombre": "Andes Trek Distribución E.I.R.L.",
+      "estado": "Pendiente",
+      "items": [
+        {
+          "sku": "MAL-003",
+          "nombre": "Maleta grande 28\" rígida",
+          "cantidad": 12,
+          "costoUnitario": 200,
+          "subtotal": 2400
+        },
+        {
+          "sku": "MOC-005",
+          "nombre": "Mochila de trekking 50 L",
+          "cantidad": 10,
+          "costoUnitario": 150,
+          "subtotal": 1500
+        }
+      ],
+      "total": 3900,
+      "moneda": "PEN"
+    }
+  ]
+}

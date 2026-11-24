@@ -1,0 +1,13 @@
+{
+  "id": "RES-1003",
+  "cabina": "CAB-003",
+  "fecha": "2026-12-19",
+  "horas": 3,
+  "cliente": "Lucía Torres",
+  "telefono": "51999000003",
+  "lugar": "Surco",
+  "estado": "Cancelada",
+  "total": 480,
+  "adelanto": 240,
+  "pago": "Transferencia"
+}

@@ -1,0 +1,12 @@
+{
+  "sku": "MAL-009",
+  "nombre": "Juego de 3 maletas rígidas",
+  "categoria": "Maletas",
+  "marca": "Andes Trek",
+  "precio": 749.9,
+  "costo": 450,
+  "stock": 8,
+  "stockMinimo": 2,
+  "moneda": "PEN",
+  "activo": true
+}
