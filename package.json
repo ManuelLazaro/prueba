@@ -1,0 +1,10 @@
+{
+  "name": "api-prueba-cabinas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API de prueba con datos inventados de alquiler de cabinas de fotos",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
