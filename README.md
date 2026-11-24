@@ -20,6 +20,18 @@ ngrok http 4000
 
 ngrok muestra una dirección `https://....ngrok-free.app`. Esa es la URL base que se carga en el sistema que quieres validar.
 
+## Abrirlo en GitHub Codespaces
+
+1. En la página del repositorio toca **Code › Codespaces › Create codespace on main**.
+2. Espera a que cargue. El servidor arranca solo en la terminal y genera su propio token.
+3. Abre la pestaña **Ports** (Puertos): ahí está la dirección del puerto 4000.
+4. Para que otros sistemas puedan llamarla, haz clic derecho sobre el puerto 4000 › **Port Visibility › Public**. Por defecto es privada y solo la ves tú.
+5. El token está en el archivo `.env` que aparece en el explorador de archivos, en la línea `API_KEY=`.
+
+Si cierras la terminal, vuelve a arrancarlo con `node server.js`. Para correr las pruebas: `node --test`.
+
+Cada codespace genera un token distinto y tiene su propia dirección.
+
 ## El token
 
 La primera vez que arranca, el servidor genera un token al azar y lo guarda en el archivo `.env`, en la línea `API_KEY=`. Ábrelo y cópialo desde ahí.

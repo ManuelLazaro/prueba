@@ -1,0 +1,12 @@
+{
+  "name": "API de prueba · Tienda y cabinas",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": {
+      "label": "API de prueba",
+      "onAutoForward": "notify"
+    }
+  },
+  "postAttachCommand": "node server.js"
+}
